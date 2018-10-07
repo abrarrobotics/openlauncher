@@ -4,7 +4,11 @@ if (enable_plugin_kotlin) {
     apply plugin: 'kotlin-android-extensions'
     apply plugin: 'kotlin-kapt'
 }
-
+  dependencies {
+    def appCenterSdkVersion = '1.8.0'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+}
 android {
     compileSdkVersion version_setup_compileSdk
     buildToolsVersion version_setup_buildTools
